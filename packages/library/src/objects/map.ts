@@ -42,3 +42,20 @@ export function convertType(items: TypeA[]): TypeB[] {
     };
   });
 }
+
+export function convertTypeWithKeys(
+  items: TypeA[],
+  keysToInt: (keyof TypeA)[]
+): TypeB[] {
+  // @ts-expect-error We need to understand how to convert types, like entering A and except B in a easy way
+  return items.map((item) => {
+    const newItem = { ...item };
+
+    for (const keyToInt of keysToInt) {
+      // @ts-expect-error This is the key that need to be converted
+      newItem[keyToInt] = parseInt(item[keyToInt]);
+    }
+
+    return newItem;
+  });
+}
