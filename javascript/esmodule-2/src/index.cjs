@@ -3,16 +3,23 @@
  * everything in an `async` IIFE to make our lives a little easier.
  */
 (async function () {
-  const getDirCommonJS1 = require("commonjs-1/src/index.js");
-  const getDirCommonJS2 = require("esmodule-1/src/index.cjs");
+  const {
+    getCommonJsPackageCommonJsFileDirName,
+    getCommonJsPackageESModuleFileDirName
+  } = require('commonjs-1/src/export.cjs');
 
-  const getESModuleDirName1 = (await import("commonjs-1/src/index.mjs"))
-    .default;
+  const {
+    getESModulePackageCommonJsFileDirName,
+    getESModulePackageESModuleFileDirName
+  } = require('esmodule-1/src/export.cjs');
 
-  const getESModuleDirName2 = (await import("esmodule-1/src/index.js")).default;
+  console.log(getCommonJsPackageCommonJsFileDirName());
+  getCommonJsPackageESModuleFileDirName().then((method) => {
+    console.log(method());
+  });
 
-  console.log(getDirCommonJS1());
-  console.log(getDirCommonJS2());
-  console.log(getESModuleDirName1());
-  console.log(getESModuleDirName2());
+  console.log(getESModulePackageCommonJsFileDirName());
+  getESModulePackageESModuleFileDirName().then((method) => {
+    console.log(method());
+  });
 })();
