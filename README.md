@@ -1,4 +1,4 @@
-# Sandbox 3
+# Sandbox Typescript
 
 Sandbox to test proof of concepts oportunities on improve Typescript development
 
