@@ -94,6 +94,15 @@ importers:
         specifier: ^0.34.2
         version: 0.34.2
 
+  vite/sandbox-1:
+    devDependencies:
+      typescript:
+        specifier: ^5.0.2
+        version: 5.1.6
+      vite:
+        specifier: ^4.4.5
+        version: 4.4.9(@types/node@20.5.1)
+
 packages:
 
   /@aashutoshrathi/word-wrap@1.2.6:
