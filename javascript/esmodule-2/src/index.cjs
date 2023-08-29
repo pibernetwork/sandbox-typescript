@@ -6,12 +6,12 @@
   const {
     getCommonJsPackageCommonJsFileDirName,
     getCommonJsPackageESModuleFileDirName
-  } = require('commonjs-1/src/export.cjs');
+  } = require('commonjs-1');
 
   const {
     getESModulePackageCommonJsFileDirName,
     getESModulePackageESModuleFileDirName
-  } = require('esmodule-1/src/export.cjs');
+  } = require('esmodule-1');
 
   console.log(getCommonJsPackageCommonJsFileDirName());
   getCommonJsPackageESModuleFileDirName().then((method) => {

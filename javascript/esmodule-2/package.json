@@ -5,6 +5,10 @@
     "esmodule-1": "workspace:*"
   },
   "description": "",
+  "exports": {
+    "import": "./src/exports.mjs",
+    "require": "./src/exports.cjs"
+  },
   "keywords": [],
   "license": "ISC",
   "main": "index.js",

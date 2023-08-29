@@ -2,4 +2,5 @@ packages:
   # all packages are modules
   - "packages/*"
   - "typescript/*"
+  - "vite/*"
   - "javascript/*"

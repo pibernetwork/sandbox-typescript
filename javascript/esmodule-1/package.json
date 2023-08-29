@@ -1,9 +1,13 @@
 {
   "author": "",
   "description": "",
+  "exports": {
+    "import": "./src/export.mjs",
+    "require": "./src/export.cjs"
+  },
   "keywords": [],
   "license": "ISC",
-  "main": "index.js",
+  "main": "./src/export.mjs",
   "name": "esmodule-1",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

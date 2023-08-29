@@ -8,7 +8,9 @@ import {
   getESModulePackageCommonJsFileDirName
 } from 'esmodule-1';
 
-console.log(getCommonJsPackagESModuleFileDirName());
-console.log(getESModulePackagESModuleFileDirName());
-console.log(getCommonJsPackageCommonJsFileDirName());
-console.log(getESModulePackageCommonJsFileDirName());
+export {
+  getCommonJsPackagESModuleFileDirName,
+  getCommonJsPackageCommonJsFileDirName,
+  getESModulePackagESModuleFileDirName,
+  getESModulePackageCommonJsFileDirName
+};

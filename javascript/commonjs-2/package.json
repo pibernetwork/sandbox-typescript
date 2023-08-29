@@ -4,6 +4,10 @@
     "commonjs-1": "workspace:*",
     "esmodule-1": "workspace:*"
   },
+  "exports": {
+    "import": "./src/exports.mjs",
+    "require": "./src/exports.cjs"
+  },
   "description": "",
   "keywords": [],
   "license": "ISC",

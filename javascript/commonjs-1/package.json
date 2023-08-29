@@ -1,9 +1,13 @@
 {
   "author": "",
   "description": "",
+  "exports": {
+    "import": "./src/export.mjs",
+    "require": "./src/export.cjs"
+  },
   "keywords": [],
   "license": "ISC",
-  "main": "src/index.js",
+  "main": "./src/export.cjs",
   "name": "commonjs-1",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
