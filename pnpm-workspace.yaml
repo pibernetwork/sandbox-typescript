@@ -4,3 +4,4 @@ packages:
   - "typescript/*"
   - "vite/*"
   - "javascript/*"
+  - "decorators/*"
