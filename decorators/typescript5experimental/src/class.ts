@@ -1,9 +1,12 @@
+/* eslint-disable @typescript-eslint/ban-types */
 function sealed(constructor: Function) {
-  console.log('Class decorator called');
+  Object.seal(constructor);
+  Object.seal(constructor.prototype);
 }
+/* eslint-enable @typescript-eslint/ban-types */
 
 @sealed
-class ClassDecorator {
+export class ClassDecorator {
   type = 'report';
   title: string;
 
@@ -11,5 +14,3 @@ class ClassDecorator {
     this.title = t;
   }
 }
-
-export default ClassDecorator;
