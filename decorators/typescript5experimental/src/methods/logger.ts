@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable no-console */
 function loggedMethod(
   _target: any,
   _propertyKey: string,
@@ -16,8 +17,9 @@ function loggedMethod(
   descriptor.value = replacementMethod;
   return descriptor;
 }
-/* eslint-enabled @typescript-eslint/no-explicit-any */
 
+/* eslint-enabled @typescript-eslint/no-explicit-any */
+/* eslint-disabled no-console */
 export class MethodLoggerCase {
   name: string;
   constructor(name: string) {
