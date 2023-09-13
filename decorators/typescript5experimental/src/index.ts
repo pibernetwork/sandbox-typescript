@@ -1,15 +1,13 @@
-import { ClassDecorator } from './class.js';
+import { ClassFloorCase } from './classes/floor.js';
+import { ClassUppercaseCase } from './classes/uppercase.js';
 import MyClass from './field.js';
 import MyMethod from './method.js';
 
 console.log(new MyClass().x);
 console.log(new MyMethod().add(1, 1));
 
-const decoratorClass = new ClassDecorator('test');
-console.log(decoratorClass);
+const classUppercaseCase = new ClassUppercaseCase('My name', 'My city');
+console.log(classUppercaseCase.displayInfo());
 
-class ChildClass extends ClassDecorator {}
-
-const childclass = new ChildClass('test');
-
-console.log(childclass);
+const classFloorcase = new ClassFloorCase('My name', 'My city', 12.34, 95.937);
+console.log(classFloorcase.getAmount(), classFloorcase.getRatio());
