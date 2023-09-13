@@ -2,13 +2,13 @@ import { beforeEach, describe, expect, test } from 'vitest';
 import { mock, mockReset } from 'vitest-mock-extended';
 import { MethodLoggerCase } from './logger.js';
 
-describe('Class Decorators - The Uppercase case', () => {
+describe('Methods Decorators - The logger case', () => {
   global.console = mock<typeof global.console>({});
   beforeEach(() => {
     mockReset(global.console);
   });
 
-  test('It will return uppercase', () => {
+  test('Happy path', () => {
     const newExample = new MethodLoggerCase('My Name');
 
     newExample.greet();
