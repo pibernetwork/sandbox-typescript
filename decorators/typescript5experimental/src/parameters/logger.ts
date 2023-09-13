@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 function ParameterLogger(
   target: any,
   methodName: string,
@@ -7,6 +8,7 @@ function ParameterLogger(
     `Parameter ${parameterIndex + 1} of ${methodName} has been accessed.`
   );
 }
+/* eslint-enable @typescript-eslint/no-explicit-any */
 
 export class ParametersLoggerCase {
   exampleMethod(
