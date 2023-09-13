@@ -1,7 +1,7 @@
 function capitalizeFirstLetter(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 function observable(target: any, key: string): any {
   // prop -> onPropChange
   const targetKey = 'on' + capitalizeFirstLetter(key) + 'Change';
@@ -16,6 +16,7 @@ function observable(target: any, key: string): any {
     });
   };
 }
+/* eslint-enable @typescript-eslint/no-explicit-any */
 
 export class PropertyObservableCase {
   @observable
