@@ -27,6 +27,7 @@
   "type": "module",
   "version": "1.0.0",
   "dependencies": {
-    "unplugin-swc": "^1.4.2"
+    "unplugin-swc": "^1.4.2",
+    "vitest-mock-extended": "^1.2.1"
   }
 }
