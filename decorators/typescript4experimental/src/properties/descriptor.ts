@@ -2,12 +2,11 @@ function logProperty(target: any, key: string) {
   let value = target[key];
 
   const getter = function () {
-    console.log(`Getter for ${key} returned ${value}`);
+    value = 'replaced in get method';
     return value;
   };
 
   const setter = function (newVal: any) {
-    console.log(`Set ${key} to ${newVal}`);
     value = newVal;
   };
 
@@ -22,7 +21,7 @@ function logProperty(target: any, key: string) {
   }
 }
 
-class User {
+export class PropertyDescriptorCase {
   @logProperty
   public name: string;
 
@@ -30,7 +29,3 @@ class User {
     this.name = name;
   }
 }
-
-const user = new User('Bytefer');
-user.name = 'Kakuqo';
-console.log(user.name);
