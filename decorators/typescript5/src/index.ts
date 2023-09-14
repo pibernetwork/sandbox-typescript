@@ -1,5 +1,27 @@
-import MyClass from './field.js';
-import MyMethod from './method.js';
+interface Context {
+  name: string;
+  metadata: Record<string, unknown>;
+}
 
-console.log(new MyClass().x);
-console.log(new MyMethod().add(1, 1));
+/** @ts-expect-error metadata not found */
+Symbol.metadata ??= Symbol('Symbol.metadata');
+
+function setMetadata(_target: any, context: Context) {
+  context.metadata[context.name] = true;
+}
+
+class SomeClass {
+  @setMetadata
+  foo = 123;
+
+  @setMetadata
+  accessor bar = 'hello!';
+
+  @setMetadata
+  baz() {}
+}
+
+const ourMetadata = SomeClass[Symbol.metadata];
+
+console.log(JSON.stringify(ourMetadata));
+// { "bar": true, "baz": true, "foo": true }
