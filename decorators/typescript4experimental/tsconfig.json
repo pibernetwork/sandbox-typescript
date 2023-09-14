@@ -1,15 +1,9 @@
 {
   "compilerOptions": {
-    "removeComments": true,
     "module": "NodeNext",
-    "target": "es2022",
     "moduleResolution": "NodeNext",
-    "esModuleInterop": true,
+    "target": "ES2021",
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "dist",
-    "skipLibCheck": true,
-    "useDefineForClassFields": true
+    "emitDecoratorMetadata": true
   }
 }
