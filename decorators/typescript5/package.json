@@ -1,5 +1,10 @@
 {
   "author": "",
+  "dependencies": {
+    "inversify": "^6.0.1",
+    "reflect-metadata": "^0.1.13",
+    "unplugin-swc": "^1.4.2"
+  },
   "description": "",
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.2",
@@ -10,7 +15,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.3",
     "ts-node": "^10.9.1",
-    "typescript": "~5.1.0",
+    "typescript": "^5.2.0",
     "vitest": "^0.34.3"
   },
   "keywords": [],
@@ -25,8 +30,5 @@
     "test": "vitest run"
   },
   "type": "module",
-  "version": "1.0.0",
-  "dependencies": {
-    "unplugin-swc": "^1.4.2"
-  }
+  "version": "1.0.0"
 }
